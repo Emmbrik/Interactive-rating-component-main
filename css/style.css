@@ -16,9 +16,9 @@ body{
 
 .card-container{
     background-color: hsl(213, 19%, 18%);
-    width: 25rem;
+    width: 26.5rem;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 3rem 2rem;
     margin-bottom: 1.8rem;
 }
 
@@ -32,6 +32,7 @@ body{
 }
 
 .text{
+    text-align: center;
     margin: 1.2rem 0 1.2rem 0;
 }
 
@@ -65,7 +66,10 @@ body{
 .rating .option:hover{
     background-color: hsl(25, 97%, 53%);
     color:#f7f7f7;
+}
 
+.option .active{
+    background-color: hsl(216, 12%, 54%);
 }
 
 .cta-button{
@@ -80,8 +84,14 @@ body{
     background-color: hsl(25, 97%, 53%);
 }
 
+.cta-button:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+}
+
 .attribution{
     color:#f7f7f7;
+    text-align: center;
 }
 
 .attribution a{
@@ -90,4 +100,27 @@ body{
 
 .attribution .name{
     color: hsl(25, 97%, 53%);
-} ;
+}
+
+.thank-you-card{
+    display: none;
+}
+
+.illustration{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.option-note{
+    margin-top: 1.5rem;
+    background-color: hsl(25, 97%, 53%, 0.11);
+    color: hsl(25, 97%, 53%);
+    padding: 0.6rem 1.2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 24px;
+}
+
