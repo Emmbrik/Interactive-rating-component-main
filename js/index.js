@@ -3,18 +3,26 @@ let submit = document.querySelector(".cta-button");
 let cardRating = document.querySelector(".card-rating");
 let thankYouCard = document.querySelector(".thank-you-card");
 let ratingValue;
+let previousOption = null;
 
 
 ratingOption.forEach(option=> {
-    option.addEventListener('click', function(){
+      option.addEventListener('click', function() {
+        if (previousOption) {
+          previousOption.classList.remove("clicked");
+        }
+        
+        option.classList.add("clicked");
+        previousOption = option;
+        
         ratingValue = option.textContent;
-        console.log(ratingValue);
+      });
+
     });
-});
+
 
 
 submit.addEventListener('click', function(){
-    console.log('The btn is working');
     cardRating.style.display = "none";
     thankYouCard.style.display = "block";
     let message = document.querySelector(".option-note");
